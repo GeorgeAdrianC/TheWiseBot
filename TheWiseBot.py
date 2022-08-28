@@ -5,21 +5,10 @@ import json, os, string, sys, threading, logging, time, re, random
 import openai
 
 #OpenAI API key
-aienv = os.getenv('OPENAI_KEY')
-if aienv == None:
-    openai.api_key = "Your OpenAI key"
-else:
-    openai.api_key = aienv
-print(aienv)
+openai.api_key = "your OpenAI API key"
 
 #Telegram bot key
-tgenv = os.getenv('TELEGRAM_KEY')
-if tgenv == None:
-    tgkey = "Your Telegram Key"
-else:
-    tgkey = tgenv
-print(tgenv)
-
+tgkey = "your Telegram BOT API key"
 
 
 # Lots of console output
@@ -35,17 +24,15 @@ running = False
 cache = None
 qcache = None
 chat_log = None
-botname = 'Makise Kurisu'
-username = 'Your name here'
+botname = 'The Wise Bot'
+username = 'Person'
+
 # Max chat log length (A token is about 4 letters and max tokens is 2048)
 max = int(3000)
 
-
 # Enable logging
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    level=logging.INFO)
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
-
 
 completion = openai.Completion()
 
@@ -66,7 +53,7 @@ def start(bot, update):
         chat_log = None
         cache = None
         qcache = None
-        botname = 'Makise Kurisu'
+        botname = 'The Wise Bot'
         username = 'thewickedkarma'
         update.message.reply_text('Hi')
         return 
@@ -93,7 +80,7 @@ def reset(bot, update):
         chat_log = None
         cache = None
         qcache = None
-        botname = 'Makise Kurisu'
+        botname = 'The Wise Bot'
         username = 'thewickedkarma'
         update.message.reply_text('Bot has been reset, send a message!')
         return
@@ -101,7 +88,7 @@ def reset(bot, update):
         chat_log = None
         cache = None
         qcache = None
-        botname = 'Makise Kurisu'
+        botname = 'The Wise Bot'
         username = 'thewickedkarma'
         update.message.reply_text('Bot has been reset, send a message!')
         return 
@@ -128,7 +115,7 @@ def retry(bot, update):
         chat_log = None
         cache = None
         qcache = None
-        botname = 'Makise Kurisu'
+        botname = 'The Wise Bot'
         username = 'thewickedkarma'
         update.message.reply_text('Send a message!')
         return 
@@ -190,7 +177,7 @@ def wait(bot, update, botname, username, new):
                 qcache = None
                 user = ""
                 username = 'thewickedkarma'
-                botname = 'Makise Kurisu'
+                botname = 'The Wise Bot'
                 update.message.reply_text('Timer has run down, bot has been reset to defaults.')
                 running = False
     else:

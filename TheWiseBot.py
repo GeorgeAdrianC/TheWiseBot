@@ -54,7 +54,7 @@ def start(bot, update):
         cache = None
         qcache = None
         botname = 'The Wise Bot'
-        username = 'thewickedkarma'
+        username = 'TheWiseBot'
         update.message.reply_text('Hi')
         return 
     else:
@@ -81,7 +81,7 @@ def reset(bot, update):
         cache = None
         qcache = None
         botname = 'The Wise Bot'
-        username = 'thewickedkarma'
+        username = 'TheWiseBot'
         update.message.reply_text('Bot has been reset, send a message!')
         return
     if tim == 1:
@@ -89,7 +89,7 @@ def reset(bot, update):
         cache = None
         qcache = None
         botname = 'The Wise Bot'
-        username = 'thewickedkarma'
+        username = 'TheWiseBot'
         update.message.reply_text('Bot has been reset, send a message!')
         return 
     else:
@@ -116,7 +116,7 @@ def retry(bot, update):
         cache = None
         qcache = None
         botname = 'The Wise Bot'
-        username = 'thewickedkarma'
+        username = 'TheWiseBot'
         update.message.reply_text('Send a message!')
         return 
     else:
@@ -176,7 +176,7 @@ def wait(bot, update, botname, username, new):
                 cache = None
                 qcache = None
                 user = ""
-                username = 'thewickedkarma'
+                username = 'TheWiseBot'
                 botname = 'The Wise Bot'
                 update.message.reply_text('Timer has run down, bot has been reset to defaults.')
                 running = False
